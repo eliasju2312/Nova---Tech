@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <!-- PASO 1: Metadatos y conexión con CSS y JavaScript. -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NOVA · Gadgets: proyecto web de tecnología con diseño responsive.">
+    <title>
+      NOVA · Gadgets
+    </title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer>
+    </script>
+  </head>
+  <body>
+    <!-- PASO 2: Encabezado y navegación. -->
+    <header>
+      <a class="brand" href="#">
+        NOVA
+        <span>
+          / TECH
+        </span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#catalogo">
+          Catálogo
+        </a>
+        <a href="#ventajas">
+          La experiencia
+        </a>
+        <button id="cart">
+          Carrito (
+          <span id="count">
+            0
+          </span>
+          )
+        </button>
+      </nav>
+    </header>
+    <!-- PASO 3: Contenido principal de la página. -->
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">
+            Tecnología para tu día a día
+          </span>
+          <h1>
+            Tu siguiente
+            <br>
+            gran upgrade.
+          </h1>
+          <p>
+            Un catálogo conceptual de gadgets para trabajar, crear y disfrutar. Explora la colección y arma tu selección.
+          </p>
+          <a class="button" href="#catalogo">
+            Explorar gadgets
+          </a>
+          <p>
+            <small>
+              Tienda de demostración · Sin compras reales
+            </small>
+          </p>
+        </div>
+        <div class="featured">
+          <span class="tag">
+            Selección del mes
+          </span>
+          <h2>
+            Audio sin distracciones.
+          </h2>
+          <div class="stat">
+            ANC
+          </div>
+          <p>
+            Sound Pro · Cancelación activa de ruido y hasta 30 horas de autonomía.
+          </p>
+          <strong>
+            Diseño conceptual de producto
+          </strong>
+        </div>
+      </section>
+      <section id="catalogo">
+        <div class="sectionhead">
+          <h2>
+            Encuentra tu próximo gadget
+          </h2>
+          <div class="filters" id="filters">
+            <button data-filter="Todos" aria-pressed="true">
+              Todos
+            </button>
+            <button data-filter="Audio" aria-pressed="false">
+              Audio
+            </button>
+            <button data-filter="Accesorios" aria-pressed="false">
+              Accesorios
+            </button>
+          </div>
+        </div>
+        <div class="grid" id="products">
+        </div>
+      </section>
+      <section id="ventajas">
+        <h2>
+          Menos ruido. Más posibilidades.
+        </h2>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">
+              01 / Audio
+            </span>
+            <h3>
+              Entra en tu zona
+            </h3>
+            <p>
+              Opciones para escuchar música, reunirte y concentrarte.
+            </p>
+          </article>
+          <article class="card">
+            <span class="tag">
+              02 / Escritorio
+            </span>
+            <h3>
+              Haz espacio para crear
+            </h3>
+            <p>
+              Accesorios pensados para un escritorio cómodo y ordenado.
+            </p>
+          </article>
+          <article class="card">
+            <span class="tag">
+              03 / Movilidad
+            </span>
+            <h3>
+              Lleva tus ideas contigo
+            </h3>
+            <p>
+              Un equipo portátil para acompañar tus proyectos.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- PASO 4: Pie de página. -->
+    <footer>
+      <strong>
+        NOVA / TECH
+      </strong>
+      <span>
+        Catálogo ficticio · Precios de ejemplo en soles
+      </span>
+    </footer>
+    <!-- PASO 5: Ventana modal, controlada desde script.js. -->
+    <dialog id="basket" aria-labelledby="cart-title">
+      <button class="close" id="close">
+        Cerrar
+      </button>
+      <h2 id="cart-title">
+        Tu selección
+      </h2>
+      <div id="items">
+      </div>
+      <p id="total" class="price">
+      </p>
+      <p>
+        Esta es una demo. No se procesan pedidos ni pagos.
+      </p>
+      <button id="clear">
+        Vaciar carrito
+      </button>
+    </dialog>
+  </body>
+</html>
